@@ -1,6 +1,5 @@
 from fastapi import FastAPI, HTTPException # pyright: ignore[reportMissingImports]
 
-
 app = FastAPI()
 # Add a root endpoint to show a welcome message
 @app.get("/")
@@ -9,12 +8,36 @@ def read_root():
 
 # Define activities outside the function
 activities = {
-    "basketball": {"type": "sport", "participants": []},
-    "swimming": {"type": "sport", "participants": []},
-    "painting": {"type": "artistic", "participants": []},
-    "theater": {"type": "artistic", "participants": []},
-    "chess": {"type": "intellectual", "participants": []},
-    "debate": {"type": "intellectual", "participants": []},
+    "basketball": {
+        "type": "sport",
+        "description": "Join the basketball team and compete in local tournaments.",
+        "participants": []
+    },
+    "swimming": {
+        "type": "sport",
+        "description": "Participate in swimming lessons and competitions.",
+        "participants": []
+    },
+    "painting": {
+        "type": "artistic",
+        "description": "Express your creativity in our painting club.",
+        "participants": []
+    },
+    "theater": {
+        "type": "artistic",
+        "description": "Act, direct, or help backstage in school theater productions.",
+        "participants": []
+    },
+    "chess": {
+        "type": "intellectual",
+        "description": "Join the chess club to improve your strategy and compete.",
+        "participants": []
+    },
+    "debate": {
+        "type": "intellectual",
+        "description": "Develop your public speaking and argumentation skills in debate club.",
+        "participants": []
+    },
 }
 
 @app.post("/activities/{activity_name}/signup")
