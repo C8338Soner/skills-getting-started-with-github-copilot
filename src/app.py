@@ -10,6 +10,7 @@ def read_root():
 # Define activities outside the function
 activities = {
     "basketball": {"type": "sport", "participants": []},
+    
     "swimming": {"type": "sport", "participants": []},
     "painting": {"type": "artistic", "participants": []},
     "theater": {"type": "artistic", "participants": []},
