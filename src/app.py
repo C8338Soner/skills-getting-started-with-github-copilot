@@ -1,6 +1,11 @@
 from fastapi import FastAPI, HTTPException # pyright: ignore[reportMissingImports]
 
+
 app = FastAPI()
+# Add a root endpoint to show a welcome message
+@app.get("/")
+def read_root():
+    return {"message": "Welcome to the Mergington High School Activities API! Visit /docs for API documentation."}
 
 # Define activities outside the function
 activities = {
