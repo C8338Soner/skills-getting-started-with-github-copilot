@@ -13,10 +13,27 @@
   letter-spacing: 0.5px;
 }
 
+
 .participants-list {
   list-style-type: disc;
   padding-left: 20px;
   margin: 0;
+}
+
+.participants-list.no-bullets {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.delete-icon {
+  cursor: pointer;
+  color: #e53935;
+  margin-left: 10px;
+  font-size: 1.1em;
+  transition: color 0.2s;
+}
+.delete-icon:hover {
+  color: #b71c1c;
 }
 
 .participants-list li {
